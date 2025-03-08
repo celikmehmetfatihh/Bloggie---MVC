@@ -1,0 +1,170 @@
+﻿@using Microsoft.AspNetCore.Identity
+@* Inject the signInManager
+ *@
+@inject SignInManager<IdentityUser> signInManager
+@inject UserManager<IdentityUser> userManager;
+
+@model Bloggie.Web.Models.ViewModels.BlogDetailsViewModel
+
+@{
+	ViewData["Title"] = Model.PageTitle;
+}
+
+<div class="container my-5">
+	<div class="row justify-content-center">
+		<div class="col-12 col-lg-6">
+
+			@if (Model != null)
+			{
+				<h1 class="mb-3">@Model.Heading</h1>
+
+				<div class="d-flex justify-content-between mb-3">
+					<span class="text-secondary">@Model.Author</span>
+					<span class="text-secondary">@Model.PublishedDate.ToShortDateString()</span>
+				</div>
+
+				<div class="mb-3">
+					@if (signInManager.IsSignedIn(User))
+					{
+						// If User is already liked this post show the filled version without id, so that js cannot access
+						@if(Model.IsLiked)
+						{
+							<a style="cursor: pointer">
+								<i class="bi bi-hand-thumbs-up-fill"></i>
+							</a>
+						}
+						// unfilled version with id, so that js can access
+						else
+						{
+							<a id="btnLike" style="cursor: pointer">
+								<i class="bi bi-hand-thumbs-up"></i>
+							</a>
+						}
+
+					}
+
+					<span id="totalLikes">@Model.TotalLikes</span> likes
+				</div>
+
+				<div class="mb-3 d-flex">
+					@foreach (var tag in Model.Tags)
+					{
+						<span class="badge bg-secondary me-1">@tag.Name</span>
+
+					}
+				</div>
+
+				<img src="@Model.FeaturedImageUrl" class="d-block img-fluid mb-3" />
+
+				<div class="mb-3 blog-details-content">
+					@Html.Raw(Model.Content)
+				</div>
+
+				<div class="card">
+					<div class="card-header">
+						<h5>Comments</h5>
+
+
+						@if (signInManager.IsSignedIn(User))
+						{
+							<form method="post">
+								<div class="mb-3">
+									<label class="form-label">Comment Description</label>
+									<input type="text" class="form-control" asp-for="CommentDescription" />
+								</div>
+
+								<div class="mb-3">
+									<button type="submit" class="btn btn-dark">Submit</button>
+@* 									We want the id of the blogPost back in the post method, thats why it is hidden input element
+ *@									<input type="hidden" asp-for="Id" />
+								    <input type="hidden" asp-for="UrlHandle" />
+
+								</div>
+							</form>
+						}
+					</div>
+
+					<div class="card-body">
+						@if (Model.Comments != null && Model.Comments.Any())
+						{
+							@foreach (var comment in Model.Comments)
+							{
+								<div class="card mb-3">
+									<div class="card-body">
+										<div>
+											@comment.Description
+										</div>
+
+										<div class="d-flex justify-content-between">
+											<span class="text-secondary">@comment.Username</span>
+											<span class="text-secondary">@comment.DateAdded.ToShortDateString()</span>
+										</div>
+
+									</div>
+								</div>
+							}
+
+						}
+					</div>
+				</div>
+
+			}
+			else
+			{
+				<p>Blog post not found!</p>
+			}
+		</div>
+	</div>
+</div>
+
+@section Scripts {
+	<script>
+		const btnLikeElement = document.getElementById('btnLike');
+		const totalLikeElement = document.getElementById('totalLikes');
+
+		async function getTotalLikes() {
+			// Since it is get method, we do not require a body
+			fetch('/api/BlogPostLike/@Model.Id/totalLikes', {
+				method: 'GET',
+				headers: {
+					'Content-Type': 'application/json',
+					'Accept': '*/*'
+				}
+				// parse the response body as JSON
+			}).then(data => data.json())
+				.then(result => totalLikeElement.innerHTML = result);
+		}
+
+		async function addLikeForBlog() {
+			console.log('Add like button clicked');
+
+			fetch('/api/BlogPostLike/Add', {
+				method: 'POST',
+				headers: {
+					// Body of the request will be in JSON format
+					'Content-Type': 'application/json',
+					'Accept': '*/*'
+				},
+				// JSON.stringify() converts the JavaScript object into a JSON string
+				body:JSON.stringify({
+					blogPostId: '@Model.Id',
+					userId: '@userManager.GetUserId(User)'
+				})
+			}).then(() => {
+
+				// Display filled-up thumbs-up
+				btnLikeElement.innerHTML = '<i class="bi bi-hand-thumbs-up-fill"></i>';
+
+				// User cannot click again
+				btnLikeElement.removeEventListener('click', addLikeForBlog);
+
+				// Fetch the new result back from the db again
+				getTotalLikes();
+			});
+		}
+
+		// when the button is clicked, addLikeForBlog method is called
+		btnLikeElement.addEventListener('click', addLikeForBlog);
+
+	</script>
+}

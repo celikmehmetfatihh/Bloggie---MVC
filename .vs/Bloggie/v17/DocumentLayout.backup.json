@@ -1,0 +1,137 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\fatih.celik\\OneDrive - VERIPARK\\Desktop\\Bloggie-MVC\\Bloggie\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{68EF660B-90ED-4A95-8A1B-62F59F64EA2B}|Bloggie.Web\\Bloggie.Web.csproj|c:\\users\\fatih.celik\\onedrive - veripark\\desktop\\bloggie-mvc\\bloggie\\bloggie.web\\repositories\\tagrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68EF660B-90ED-4A95-8A1B-62F59F64EA2B}|Bloggie.Web\\Bloggie.Web.csproj|solutionrelative:bloggie.web\\repositories\\tagrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68EF660B-90ED-4A95-8A1B-62F59F64EA2B}|Bloggie.Web\\Bloggie.Web.csproj|c:\\users\\fatih.celik\\onedrive - veripark\\desktop\\bloggie-mvc\\bloggie\\bloggie.web\\repositories\\blogpostrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68EF660B-90ED-4A95-8A1B-62F59F64EA2B}|Bloggie.Web\\Bloggie.Web.csproj|solutionrelative:bloggie.web\\repositories\\blogpostrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68EF660B-90ED-4A95-8A1B-62F59F64EA2B}|Bloggie.Web\\Bloggie.Web.csproj|c:\\users\\fatih.celik\\onedrive - veripark\\desktop\\bloggie-mvc\\bloggie\\bloggie.web\\data\\authdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68EF660B-90ED-4A95-8A1B-62F59F64EA2B}|Bloggie.Web\\Bloggie.Web.csproj|solutionrelative:bloggie.web\\data\\authdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68EF660B-90ED-4A95-8A1B-62F59F64EA2B}|Bloggie.Web\\Bloggie.Web.csproj|c:\\users\\fatih.celik\\onedrive - veripark\\desktop\\bloggie-mvc\\bloggie\\bloggie.web\\views\\adminblogposts\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{68EF660B-90ED-4A95-8A1B-62F59F64EA2B}|Bloggie.Web\\Bloggie.Web.csproj|solutionrelative:bloggie.web\\views\\adminblogposts\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68EF660B-90ED-4A95-8A1B-62F59F64EA2B}|Bloggie.Web\\Bloggie.Web.csproj|c:\\users\\fatih.celik\\onedrive - veripark\\desktop\\bloggie-mvc\\bloggie\\bloggie.web\\controllers\\admintagscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68EF660B-90ED-4A95-8A1B-62F59F64EA2B}|Bloggie.Web\\Bloggie.Web.csproj|solutionrelative:bloggie.web\\controllers\\admintagscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68EF660B-90ED-4A95-8A1B-62F59F64EA2B}|Bloggie.Web\\Bloggie.Web.csproj|c:\\users\\fatih.celik\\onedrive - veripark\\desktop\\bloggie-mvc\\bloggie\\bloggie.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68EF660B-90ED-4A95-8A1B-62F59F64EA2B}|Bloggie.Web\\Bloggie.Web.csproj|solutionrelative:bloggie.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68EF660B-90ED-4A95-8A1B-62F59F64EA2B}|Bloggie.Web\\Bloggie.Web.csproj|c:\\users\\fatih.celik\\onedrive - veripark\\desktop\\bloggie-mvc\\bloggie\\bloggie.web\\repositories\\itagrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68EF660B-90ED-4A95-8A1B-62F59F64EA2B}|Bloggie.Web\\Bloggie.Web.csproj|solutionrelative:bloggie.web\\repositories\\itagrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TagRepository.cs",
+              "DocumentMoniker": "C:\\Users\\fatih.celik\\OneDrive - VERIPARK\\Desktop\\Bloggie-MVC\\Bloggie\\Bloggie.Web\\Repositories\\TagRepository.cs",
+              "RelativeDocumentMoniker": "Bloggie.Web\\Repositories\\TagRepository.cs",
+              "ToolTip": "C:\\Users\\fatih.celik\\OneDrive - VERIPARK\\Desktop\\Bloggie-MVC\\Bloggie\\Bloggie.Web\\Repositories\\TagRepository.cs",
+              "RelativeToolTip": "Bloggie.Web\\Repositories\\TagRepository.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T11:15:49.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BlogPostRepository.cs",
+              "DocumentMoniker": "C:\\Users\\fatih.celik\\OneDrive - VERIPARK\\Desktop\\Bloggie-MVC\\Bloggie\\Bloggie.Web\\Repositories\\BlogPostRepository.cs",
+              "RelativeDocumentMoniker": "Bloggie.Web\\Repositories\\BlogPostRepository.cs",
+              "ToolTip": "C:\\Users\\fatih.celik\\OneDrive - VERIPARK\\Desktop\\Bloggie-MVC\\Bloggie\\Bloggie.Web\\Repositories\\BlogPostRepository.cs",
+              "RelativeToolTip": "Bloggie.Web\\Repositories\\BlogPostRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T16:03:45.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Add.cshtml",
+              "DocumentMoniker": "C:\\Users\\fatih.celik\\OneDrive - VERIPARK\\Desktop\\Bloggie-MVC\\Bloggie\\Bloggie.Web\\Views\\AdminBlogPosts\\Add.cshtml",
+              "RelativeDocumentMoniker": "Bloggie.Web\\Views\\AdminBlogPosts\\Add.cshtml",
+              "ToolTip": "C:\\Users\\fatih.celik\\OneDrive - VERIPARK\\Desktop\\Bloggie-MVC\\Bloggie\\Bloggie.Web\\Views\\AdminBlogPosts\\Add.cshtml",
+              "RelativeToolTip": "Bloggie.Web\\Views\\AdminBlogPosts\\Add.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-19T11:32:00.92Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AdminTagsController.cs",
+              "DocumentMoniker": "C:\\Users\\fatih.celik\\OneDrive - VERIPARK\\Desktop\\Bloggie-MVC\\Bloggie\\Bloggie.Web\\Controllers\\AdminTagsController.cs",
+              "RelativeDocumentMoniker": "Bloggie.Web\\Controllers\\AdminTagsController.cs",
+              "ToolTip": "C:\\Users\\fatih.celik\\OneDrive - VERIPARK\\Desktop\\Bloggie-MVC\\Bloggie\\Bloggie.Web\\Controllers\\AdminTagsController.cs",
+              "RelativeToolTip": "Bloggie.Web\\Controllers\\AdminTagsController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T11:27:10.627Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\fatih.celik\\OneDrive - VERIPARK\\Desktop\\Bloggie-MVC\\Bloggie\\Bloggie.Web\\Program.cs",
+              "RelativeDocumentMoniker": "Bloggie.Web\\Program.cs",
+              "ToolTip": "C:\\Users\\fatih.celik\\OneDrive - VERIPARK\\Desktop\\Bloggie-MVC\\Bloggie\\Bloggie.Web\\Program.cs",
+              "RelativeToolTip": "Bloggie.Web\\Program.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T11:18:16.406Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ITagRepository.cs",
+              "DocumentMoniker": "C:\\Users\\fatih.celik\\OneDrive - VERIPARK\\Desktop\\Bloggie-MVC\\Bloggie\\Bloggie.Web\\Repositories\\ITagRepository.cs",
+              "RelativeDocumentMoniker": "Bloggie.Web\\Repositories\\ITagRepository.cs",
+              "ToolTip": "C:\\Users\\fatih.celik\\OneDrive - VERIPARK\\Desktop\\Bloggie-MVC\\Bloggie\\Bloggie.Web\\Repositories\\ITagRepository.cs",
+              "RelativeToolTip": "Bloggie.Web\\Repositories\\ITagRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T11:16:10.852Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\fatih.celik\\OneDrive - VERIPARK\\Desktop\\Bloggie-MVC\\Bloggie\\Bloggie.Web\\Data\\AuthDbContext.cs",
+              "RelativeDocumentMoniker": "Bloggie.Web\\Data\\AuthDbContext.cs",
+              "ToolTip": "C:\\Users\\fatih.celik\\OneDrive - VERIPARK\\Desktop\\Bloggie-MVC\\Bloggie\\Bloggie.Web\\Data\\AuthDbContext.cs",
+              "RelativeToolTip": "Bloggie.Web\\Data\\AuthDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T13:36:23.208Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

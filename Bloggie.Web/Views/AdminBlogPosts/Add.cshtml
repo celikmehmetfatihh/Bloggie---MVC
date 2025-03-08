@@ -1,0 +1,131 @@
+﻿@model Bloggie.Web.Models.ViewModels.AddBlogPostRequest
+
+@{
+}
+
+<div class="bg-secondary bg-opacity-10 py-2">
+    <div class="container">
+        <h1>Add New BlogPost - Admin Functionality</h1>
+    </div>
+</div>
+
+<div class="container py-5">
+    <form method="post">
+
+        <div class="mb-3">
+            <label class="form-label">Heading</label>
+@*             using asp-for, bind the value of the input element to the model
+ *@           <input type="text" class="form-control" id="heading" asp-for="Heading" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Page Title</label>
+            <input type="text" class="form-control" id="pageTitle" asp-for="PageTitle" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Content</label>
+            <textarea class="form-control" id="content" asp-for="Content"></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Short Description</label>
+            <input type="text" class="form-control" id="shortDescription" asp-for="ShortDescription" />
+        </div>
+
+        <div class="mb-3"> 
+            <label class="form-label">Featured Image Upload</label>
+            <input type="file" id="featuredImageUpload" class="form-control" />
+
+            <img src="" id="featuredImageDisplay" style="display:none; width: 300px" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Featured Image URL</label>
+            <input type="text" class="form-control" id="featuredImageUrl" asp-for="FeaturedImageUrl" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">URL Handle</label>
+            <input type="text" class="form-control" id="urlHandle" asp-for="UrlHandle" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Published Date</label>
+            <input type="date" class="form-control" id="publishedDate" asp-for="PublishedDate" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Author</label>
+            <input type="text" class="form-control" id="author" asp-for="Author" />
+        </div>
+
+        <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="visible" asp-for="Visible">
+            <label class="form-check-label" >
+                Is Visible?
+            </label>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Tags</label>
+            <select class="form-select" asp-items="@Model.Tags" asp-for="SelectedTags">
+
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <button type="submit" class="btn btn-dark">Save</button>
+        </div>
+
+    </form>
+</div>
+
+@section Scripts {
+    <script>
+        var editor = new FroalaEditor('#content', {
+            // override the imageUploadURL to use the api method in FroalaEditor
+            imageUploadURL: '/api/images'
+        });
+
+
+
+        const featuredUploadElement = document.getElementById('featuredImageUpload');
+        const featuredImageUrlElement = document.getElementById('featuredImageUrl');
+        const featuredImageDisplayElement = document.getElementById('featuredImageDisplay');
+
+        // e (event) passed automatically when the change event occurs on the input element.
+        async function uploadFeaturedImage(e) {
+            console.log(e.target.files[0]);
+
+            // FormData is special object used to easily construct and send data (like files) in an HTTP request.
+            let data = new FormData();
+            // 'file' is the key represents the file in the FormData. On the server side, you will access the file using this key.
+            // e.target.files[0] -> actual file that was selected by the user.
+            data.append('file', e.target.files[0]);
+
+            // fetch() is used to make HTTP request in JavaScript.
+            await fetch('/api/images', {
+                method: 'POST',
+                headers: {
+                    // Client will accept any type of response (JSON, HTML..)
+                    'Accept': '*/*',
+                },
+                body: data
+                // .then() handle the result of a promise. Waits for the server to respond and then process that response.
+                // transforming server's JSON response into JavaScript object
+            }).then(response => response.json())
+            // the result contains the data returned by the server (URL of the uploaded image)
+            // result refers to the parsed JSON object returned by the server.
+                .then(result => {
+                    featuredImageUrlElement.value = result.link;
+                    featuredImageDisplayElement.src = result.link;
+                    featuredImageDisplayElement.style.display = 'block';
+                });
+        }
+
+        // The event listener listens for a change event, which occurs when the user selects a file for upload.
+        featuredUploadElement.addEventListener('change', uploadFeaturedImage)
+
+    </script>
+}
